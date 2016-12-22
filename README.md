@@ -64,3 +64,7 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * *Changed the number of pizzas to 28*
 * *Simplified the calculations to resize the pizzas*
 * *Encapsulated several document calls into variables to reduce slowdown
+
+#*References and Thanks*
+*Used W3C for syntax
+*Would like to thank everyone for being so helpful on the udacity forums.
