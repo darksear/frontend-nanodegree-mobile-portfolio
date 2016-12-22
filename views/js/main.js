@@ -488,28 +488,17 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 
 // The following code for sliding background pizzas was pulled from Ilya's demo found at:
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
-<<<<<<< HEAD
-  //call from the DOM only once
-  //var items = document.querySelectorAll('.mover');
-// Moves the sliding background pizzas based on scroll position
-function updatePositions() {
-  frame++;
-  window.performance.mark("mark_start_frame");
-  var items = document.querySelectorAll('.mover');
-=======
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   //Let the browser know that there is going to be some animation frames
-  requestAnimationFrame(updatePositions);
   var items = document.querySelectorAll('.mover');
   //call from the DOM only once
   var scrollingId = document.body.scrollTop;
->>>>>>> parent of e666c18... fixes part deux
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin((scrollingId / 1250) + (i % 5));
     //items[i].style['transform'] = 'translate(' + items[i].basicLeft + 100 * phase + 'px)';
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
@@ -525,7 +514,7 @@ function updatePositions() {
 }
 
 // runs updatePositions on scroll
-window.addEventListener('scroll', updatePositions());
+window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
@@ -533,7 +522,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   //200 pizzas seemed to be overkill so I reduced it until there were few pizzas visible and then increased
     // the number until I got to a comfortable 28.
-  var pizzaElem = document.querySelector("#movingPizzas1");
   for (var i = 0; i < 28; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -542,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    pizzaElem.appendChild(elem);
+    document.querySelector("#movingPizzas1").appendChild(elem);
   }
-  updatePositions();
+  //updatePositions();
 });
