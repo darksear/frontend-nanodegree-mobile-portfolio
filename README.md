@@ -57,10 +57,12 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 
 #**Changelog**
 ##**Main Page**
-* *Ran pagespeed insights and followed suggestions
+* *Ran pagespeed insights and followed suggestions*
 - It now runs with a insight score of 92
 
 ##**Cam's Pizzeria page**
 * *Changed the number of pizzas to 28*
 * *Simplified the calculations to resize the pizzas*
-* *Encapsulated several document calls into variables to reduce slowdown
+* *Encapsulated several document calls into variables to reduce slowdown*
+* *Removed requestAnimationFrame from within function*
+- It caused the entire function to run continuously.
