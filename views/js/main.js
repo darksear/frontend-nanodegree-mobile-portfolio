@@ -494,7 +494,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
   //Let the browser know that there is going to be some animation frames
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName('mover');
   //call from the DOM only once
   var scrollingId = document.body.scrollTop;
   for (var i = 0; i < items.length; i++) {
@@ -522,7 +522,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   //200 pizzas seemed to be overkill so I reduced it until there were few pizzas visible and then increased
     // the number until I got to a comfortable 28.
-  for (var i = 0; i < 28; i++) {
+  var numberOfPizzas = window.innerHeight / s * cols;
+  console.log(numberOfPizzas);
+  for (var i = 0; i < numberOfPizzas; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
@@ -532,5 +534,5 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
-  //updatePositions();
+  updatePositions();
 });

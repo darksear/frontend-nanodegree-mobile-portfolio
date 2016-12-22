@@ -12,3 +12,16 @@ function logCRP() {
 window.addEventListener("load", function(event) {
   logCRP();
 });
+
+var cssId = '//fonts.googleapis.com/css?family=Open+Sans:400,700';  
+if (!document.getElementById(cssId))
+{
+    var head  = document.getElementsByTagName('head')[0];
+    var link  = document.createElement('link');
+    link.id   = cssId;
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'http://website.com/css/stylesheet.css';
+    link.media = 'all';
+    head.appendChild(link);
+}

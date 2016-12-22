@@ -54,11 +54,16 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
 * <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
 
+#Directions
+##Open index.html
 
 #**Changelog**
 ##**Main Page**
 * *Ran pagespeed insights and followed suggestions*
-- It now runs with a insight score of 92
+- It now runs with a insight score of 96
+* *Removed google analytics from the page*
+* *Moved the fonts api to the javascript*
+* *Put in a media query for print.css*
 
 ##**Cam's Pizzeria page**
 * *Changed the number of pizzas to 28*
@@ -66,3 +71,12 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * *Encapsulated several document calls into variables to reduce slowdown*
 * *Removed requestAnimationFrame from within function*
 - It caused the entire function to run continuously.
+* *Fixed the pizzeria image*
+* *Uncommented out the function call so that there would be more pizzas before scrolling*
+* *Changed the selectAll to getElementsByClassName*
+* *Used the window.innerheight property to calculate how many pizzas were needed*
+
+#*Thanks and References*
+*I would like to thank those on the Udacity Forum for answering every question I had about this project without me even needing to ask.*
+*I would also like to acknowledge the Udacity staff including those who have reviewed my project.  You have helped me improve it immeasurably.*
+*I also used W3C and stackoverflow for suggestions on how to improve my coding*
