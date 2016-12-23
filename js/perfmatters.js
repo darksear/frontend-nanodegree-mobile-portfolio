@@ -21,7 +21,7 @@ if (!document.getElementById(cssId))
     link.id   = cssId;
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'http://website.com/css/stylesheet.css';
+    link.href = '//fonts.googleapis.com/css?family=Open+Sans:400,700';
     link.media = 'all';
     head.appendChild(link);
 }

@@ -64,6 +64,8 @@ The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstra
 * *Removed google analytics from the page*
 * *Moved the fonts api to the javascript*
 * *Put in a media query for print.css*
+* *Inlined CSS*
+* *Optimized images with TinyJpg*
 
 ##**Cam's Pizzeria page**
 * *Changed the number of pizzas to 28*
